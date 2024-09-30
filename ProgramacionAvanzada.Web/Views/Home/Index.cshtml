@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            background-attachment: fixed;
+        }
+
+        .card img {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h2 class="mt-4 text-center text-dark">Tarea Programacion avanzada</h2>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div class="card text-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3607/3607444.png" class="card-img-top" alt="Lista persona">
+                    <div class="card-body">
+                        <h5 class="card-title">Lista persona</h5>
+                        @Html.ActionLink("Ver Lista", "Index", "Person", null, new { @class = "btn btn-primary" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div class="card text-center">
+                    <img src="https://static.vecteezy.com/system/resources/previews/034/638/038/large_2x/ai-generated-toy-car-avatar-icon-clip-art-sticker-decoration-simple-background-free-photo.jpg" class="card-img-top" alt="Lista carrp">
+                    <div class="card-body">
+                        <h5 class="card-title">Lista carro</h5>
+                        @Html.ActionLink("Ver Lista", "Index", "Car", null, new { @class = "btn btn-primary" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div class="card text-center">
+                    <img src="https://www.shareicon.net/data/512x512/2017/01/06/868320_people_512x512.png" class="card-img-top" alt="Lista trabajp">
+                    <div class="card-body">
+                        <h5 class="card-title">lista trabajo</h5>
+                        @Html.ActionLink("Ver Lista", "Index", "Job", null, new { @class = "btn btn-primary" })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

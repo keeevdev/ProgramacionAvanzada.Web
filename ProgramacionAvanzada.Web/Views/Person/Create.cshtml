@@ -1,0 +1,45 @@
+﻿@model ProgramacionAvanzada.Web.Models.Person
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Person</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h2 class="text-center text-dark">Crear Nueva Persona</h2>
+
+        @using (Html.BeginForm())
+        {
+            <div class="d-flex flex-column align-items-center">
+                <div class="form-group w-50">
+                    <label for="Id">ID:</label>
+                    @Html.TextBoxFor(m => m.Id, new { @class = "form-control", @placeholder = "Ingrese el iD" })
+                </div>
+                <div class="form-group w-50">
+                    <label for="Name">Nombre:</label>
+                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @placeholder = "Ingrese el nombre" })
+                </div>
+                <div class="form-group w-50">
+                    <label for="Description">Descripción:</label>
+                    @Html.TextBoxFor(m => m.Description, new { @class = "form-control", @placeholder = "Ingrese la descripcion" })
+                </div>
+                <div class="text-center">
+                    <input type="submit" value="Crear" class="btn btn-success btn-lg" />
+                </div>
+            </div>
+        }
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,56 @@
+﻿@model IEnumerable<ProgramacionAvanzada.Web.Models.Job>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de trabajos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h2 class="text-center text-dark">Lista trabajo</h2>
+
+        <p>@Html.ActionLink("Agregar", "Create", "Job", null, new { @class = "btn btn-success" })</p>
+
+        <table class="table table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th>ID</th>
+                    <th>Nombree</th>
+                    <th>Descripcioon</th>
+                    <th>Info</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var job in Model)
+                {
+                    <tr>
+                        <td>@job.Id</td>
+                        <td>@job.Name</td>
+                        <td>@job.Description</td>
+                        <td>
+                            @if (int.Parse(job.Id) % 2 != 0)
+                            {
+                                <span class="text-danger">**Impar**</span>
+                            }
+                        </td>
+                        <td style="@(int.Parse(job.Id) % 2 == 0 ? "background-color: lightblue;" : "background-color: lightgreen;")">
+                            @job.Id
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
